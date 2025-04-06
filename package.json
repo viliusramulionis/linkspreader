@@ -11,6 +11,7 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
+    "selenium-webdriver": "^4.31.0",
     "stremio-addon-sdk": "^1.6.10"
   }
 }

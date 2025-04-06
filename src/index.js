@@ -16,14 +16,8 @@ const builder = new addonBuilder({
 
 // takes function(args)
 builder.defineStreamHandler(function(args) {
-    if (args.type === 'movie' && args.id === 'tt1254207') {
-        // serve one stream to big buck bunny
-        const stream = { url: 'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4' }
-        return Promise.resolve({ streams: [stream] })
-    } else {
-        // otherwise return no streams
-        return Promise.resolve({ streams: [] })
-    }
+    const stream = { url: 'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4' }
+    return Promise.resolve({ streams: [stream] })
 })
 
 serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 })

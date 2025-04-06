@@ -16,6 +16,7 @@ const builder = new addonBuilder({
 
 // takes function(args)
 builder.defineStreamHandler(function(args) {
+    console.log(args);
     const stream = { url: 'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4' }
     return Promise.resolve({ streams: [stream] })
 })
